@@ -1,48 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mergington High School Activities</title>
+    <title>GitHub Copilot - Primeiros Passos</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <h1>Bem-vindo ao GitHub Copilot</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-      <section id="activities-container">
-        <h3>Available Activities</h3>
-        <div id="activities-list">
-          <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
+      <section id="inicio">
+        <h2>Primeiros Passos com GitHub Copilot</h2>
+        <p>
+          Esta é uma aplicação de exemplo para demonstrar o uso do GitHub Copilot.
+        </p>
+        <button id="botao-interativo">Clique aqui!</button>
+        <div id="resultado"></div>
+      </section>
+
+      <section id="sobre">
+        <h2>Sobre</h2>
+        <p>
+          GitHub Copilot é um assistente de programação com IA que ajuda
+          desenvolvedores a escrever código mais rapidamente.
+        </p>
+      </section>
+
+      <section id="atividades">
+        <h2>Atividades Disponíveis</h2>
+        <div class="activities-container">
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>Workshop de JavaScript</h3>
+              <span class="activity-badge">Intermediário</span>
+            </div>
+            <p class="activity-description">
+              Aprenda conceitos avançados de JavaScript e ES6+ com exemplos práticos.
+            </p>
+            <div class="activity-info">
+              <span class="activity-date">📅 15 de Janeiro, 2024</span>
+              <span class="activity-duration">⏰ 2 horas</span>
+            </div>
+            <div class="participants-section">
+              <h4>👥 Participantes Inscritos (5)</h4>
+              <ul class="participants-list">
+                <li>Ana Silva</li>
+                <li>Carlos Santos</li>
+                <li>Maria Oliveira</li>
+                <li>João Pereira</li>
+                <li>Lucas Costa</li>
+              </ul>
+            </div>
+            <button class="join-button">Participar</button>
+          </div>
+
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>Introdução ao React</h3>
+              <span class="activity-badge">Iniciante</span>
+            </div>
+            <p class="activity-description">
+              Primeiros passos com React: componentes, props e state management.
+            </p>
+            <div class="activity-info">
+              <span class="activity-date">📅 20 de Janeiro, 2024</span>
+              <span class="activity-duration">⏰ 3 horas</span>
+            </div>
+            <div class="participants-section">
+              <h4>👥 Participantes Inscritos (3)</h4>
+              <ul class="participants-list">
+                <li>Pedro Rodrigues</li>
+                <li>Sofia Lima</li>
+                <li>Rafael Martins</li>
+              </ul>
+            </div>
+            <button class="join-button">Participar</button>
+          </div>
+
+          <div class="activity-card">
+            <div class="activity-header">
+              <h3>GitHub Copilot na Prática</h3>
+              <span class="activity-badge">Avançado</span>
+            </div>
+            <p class="activity-description">
+              Maximize sua produtividade com dicas e truques do GitHub Copilot.
+            </p>
+            <div class="activity-info">
+              <span class="activity-date">📅 25 de Janeiro, 2024</span>
+              <span class="activity-duration">⏰ 1.5 horas</span>
+            </div>
+            <div class="participants-section">
+              <h4>👥 Participantes Inscritos (7)</h4>
+              <ul class="participants-list">
+                <li>Gabriela Ferreira</li>
+                <li>Diego Almeida</li>
+                <li>Camila Souza</li>
+                <li>Bruno Nascimento</li>
+                <li>Isabella Torres</li>
+                <li>Matheus Ribeiro</li>
+                <li>Larissa Campos</li>
+              </ul>
+            </div>
+            <button class="join-button">Participar</button>
+          </div>
         </div>
       </section>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
-          <div class="form-group">
-            <label for="activity">Select Activity:</label>
-            <select id="activity" required>
-              <option value="">-- Select an activity --</option>
-              <!-- Activity options will be loaded here -->
-            </select>
-          </div>
-          <button type="submit">Sign Up</button>
+      <section id="contato">
+        <h2>Contato</h2>
+        <form id="formulario-contato">
+          <input
+            type="text"
+            id="nome"
+            placeholder="Seu nome"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Seu email"
+            required
+          />
+          <textarea
+            id="mensagem"
+            placeholder="Sua mensagem"
+            required
+          ></textarea>
+          <button type="submit">Enviar</button>
         </form>
-        <div id="message" class="hidden"></div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Mergington High School</p>
+      <p>
+        &copy; 2024 GitHub Copilot Demo. Todos os direitos reservados.
+      </p>
     </footer>
 
     <script src="app.js"></script>

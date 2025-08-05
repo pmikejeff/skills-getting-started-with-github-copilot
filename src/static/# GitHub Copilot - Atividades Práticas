@@ -1,0 +1,430 @@
+# GitHub Copilot - Atividades Práticas
+
+Este guia apresenta atividades práticas para aprender GitHub Copilot com cartões interativos mostrando participantes inscritos.
+
+## HTML - Estrutura dos Cartões de Atividade
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot - Atividades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Atividades GitHub Copilot</h1>
+        <nav>
+            <ul>
+                <li><a href="#atividades">Atividades</a></li>
+                <li><a href="#participantes">Participantes</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="atividades" class="activities-section">
+            <h2>Atividades Disponíveis</h2>
+            
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Introdução ao GitHub Copilot</h3>
+                    <span class="difficulty beginner">Iniciante</span>
+                </div>
+                <div class="activity-content">
+                    <p>Aprenda os conceitos básicos do GitHub Copilot e como começar a usar esta ferramenta de IA.</p>
+                    <div class="activity-meta">
+                        <span class="duration">⏱️ 30 min</span>
+                        <span class="category">📚 Conceitos</span>
+                    </div>
+                </div>
+                <div class="participants-section">
+                    <h4>👥 Participantes Inscritos</h4>
+                    <ul class="participants-list">
+                        <li class="participant">
+                            <div class="participant-avatar">JD</div>
+                            <span class="participant-name">João Silva</span>
+                        </li>
+                        <li class="participant">
+                            <div class="participant-avatar">MS</div>
+                            <span class="participant-name">Maria Santos</span>
+                        </li>
+                        <li class="participant">
+                            <div class="participant-avatar">PR</div>
+                            <span class="participant-name">Pedro Rocha</span>
+                        </li>
+                    </ul>
+                    <button class="join-btn" data-activity="intro">Participar</button>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Desenvolvimento Web com Copilot</h3>
+                    <span class="difficulty intermediate">Intermediário</span>
+                </div>
+                <div class="activity-content">
+                    <p>Construa aplicações web utilizando HTML, CSS e JavaScript com assistência do GitHub Copilot.</p>
+                    <div class="activity-meta">
+                        <span class="duration">⏱️ 90 min</span>
+                        <span class="category">💻 Prática</span>
+                    </div>
+                </div>
+                <div class="participants-section">
+                    <h4>👥 Participantes Inscritos</h4>
+                    <ul class="participants-list">
+                        <li class="participant">
+                            <div class="participant-avatar">AC</div>
+                            <span class="participant-name">Ana Costa</span>
+                        </li>
+                        <li class="participant">
+                            <div class="participant-avatar">LF</div>
+                            <span class="participant-name">Lucas Ferreira</span>
+                        </li>
+                    </ul>
+                    <button class="join-btn" data-activity="web">Participar</button>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>APIs e Backend com Copilot</h3>
+                    <span class="difficulty advanced">Avançado</span>
+                </div>
+                <div class="activity-content">
+                    <p>Desenvolva APIs REST e sistemas backend usando Node.js com auxílio do GitHub Copilot.</p>
+                    <div class="activity-meta">
+                        <span class="duration">⏱️ 120 min</span>
+                        <span class="category">🔧 Backend</span>
+                    </div>
+                </div>
+                <div class="participants-section">
+                    <h4>👥 Participantes Inscritos</h4>
+                    <ul class="participants-list">
+                        <li class="participant">
+                            <div class="participant-avatar">RT</div>
+                            <span class="participant-name">Rafael Torres</span>
+                        </li>
+                        <li class="participant">
+                            <div class="participant-avatar">CM</div>
+                            <span class="participant-name">Carla Mendes</span>
+                        </li>
+                        <li class="participant">
+                            <div class="participant-avatar">GS</div>
+                            <span class="participant-name">Gabriel Silva</span>
+                        </li>
+                        <li class="participant">
+                            <div class="participant-avatar">JO</div>
+                            <span class="participant-name">Júlia Oliveira</span>
+                        </li>
+                    </ul>
+                    <button class="join-btn" data-activity="backend">Participar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+## CSS - Estilização dos Cartões e Participantes
+
+```css
+/* ...existing code... */
+
+.activities-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.activity-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.difficulty {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.difficulty.beginner {
+    background: #4CAF50;
+}
+
+.difficulty.intermediate {
+    background: #FF9800;
+}
+
+.difficulty.advanced {
+    background: #f44336;
+}
+
+.activity-content {
+    padding: 1.5rem;
+}
+
+.activity-content p {
+    margin-bottom: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.activity-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.participants-section {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.participants-section h4 {
+    margin: 0 0 1rem 0;
+    color: #495057;
+    font-size: 1.1rem;
+}
+
+.participants-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.participant {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.participant:hover {
+    transform: scale(1.05);
+}
+
+.participant-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.participant-name {
+    font-size: 0.9rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.join-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.join-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.join-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .activity-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .participants-list {
+        flex-direction: column;
+    }
+    
+    .participant {
+        justify-content: flex-start;
+    }
+}
+```
+
+## JavaScript - Funcionalidade Interativa
+
+```javascript
+// ...existing code...
+
+// Funcionalidade para participar de atividades
+document.querySelectorAll('.join-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const activity = this.getAttribute('data-activity');
+        const participantsList = this.parentNode.querySelector('.participants-list');
+        
+        // Simular novo participante
+        const newParticipant = document.createElement('li');
+        newParticipant.className = 'participant';
+        newParticipant.innerHTML = `
+            <div class="participant-avatar">EU</div>
+            <span class="participant-name">Você</span>
+        `;
+        
+        // Adicionar animação de entrada
+        newParticipant.style.opacity = '0';
+        newParticipant.style.transform = 'scale(0.8)';
+        participantsList.appendChild(newParticipant);
+        
+        // Animar entrada
+        setTimeout(() => {
+            newParticipant.style.transition = 'all 0.3s ease';
+            newParticipant.style.opacity = '1';
+            newParticipant.style.transform = 'scale(1)';
+        }, 100);
+        
+        // Atualizar botão
+        this.textContent = 'Inscrito ✓';
+        this.style.background = '#4CAF50';
+        this.disabled = true;
+        
+        // Mostrar mensagem de confirmação
+        showNotification(`Você se inscreveu na atividade: ${getActivityName(activity)}`);
+    });
+});
+
+function getActivityName(activityCode) {
+    const activities = {
+        'intro': 'Introdução ao GitHub Copilot',
+        'web': 'Desenvolvimento Web com Copilot',
+        'backend': 'APIs e Backend com Copilot'
+    };
+    return activities[activityCode] || 'Atividade';
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span>✅ ${message}</span>
+            <button onclick="this.parentNode.parentNode.remove()">×</button>
+        </div>
+    `;
+    
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        z-index: 1000;
+        animation: slideIn 0.3s ease;
+    `;
+    
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .notification-content {
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .notification-content button {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #999;
+        }
+    `;
+    
+    document.head.appendChild(style);
+    document.body.appendChild(notification);
+    
+    // Remover automaticamente após 5 segundos
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.remove();
+        }
+    }, 5000);
+}
+
+// ...existing code...
+```
+
+## Funcionalidades Implementadas
+
+### Cartões de Atividade com:
+- **Header colorido** com título e nível de dificuldade
+- **Conteúdo** com descrição, duração e categoria
+- **Seção de participantes** elegante com avatares circulares
+- **Botão de participação** interativo
+
+### Seção de Participantes:
+- Lista horizontal de participantes com avatares
+- Avatares coloridos com iniciais dos nomes
+- Hover effects para melhor interação
+- Design responsivo para mobile
+
+### Interatividade:
+- Botão para se inscrever em atividades
+- Notificações de confirmação
+- Animações suaves de entrada
+- Estados visuais do botão (ativo/inscrito)
+
+O design é moderno, responsivo e segue as melhores práticas de UX/UI para uma experiência visual atrativa e funcional.
